@@ -1,0 +1,7 @@
+{application, blog,
+  [{description, "A clean Bootstrap blog theme created by Start Bootstrap, http://startbootstrap.com/template-overviews/clean-blog/"},
+   {vsn, "v3.3.7+1"},
+   {registered, []},
+   {applications, [kernel, stdlib]},
+   {mod, { blog, []}},
+   {env, []} ]}.
