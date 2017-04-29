@@ -2,7 +2,7 @@
 -behaviour(supervisor).
 -behaviour(application).
 -export([init/1, start/2, stop/1]).
--export([vendors/2,vendors/3]).
+-export([vendors/2,vendors/3, dummy/0]).
 -include_lib("nitro/include/nitro.hrl").
 
 start(_,_) -> supervisor:start_link({local,blog }, blog,[]).
@@ -32,3 +32,9 @@ vendor(bootstrap3,js)      -> ["/vendor/bootstrap/js/bootstrap.min.js"];
 vendor(fontawesome,css)    -> ["/vendor/font-awesome/css/font-awesome.min.css"];
 vendor(fontawesome,js)     -> [].
 
+dummy() ->
+   [
+    {page,[{css,vendors(css,[bootstrap3,fontawesome,blog])},
+           {js,vendors(js,[bootstrap3,fontawesome,jquery,blog])}
+          ]}
+   ].
