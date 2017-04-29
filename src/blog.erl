@@ -7,7 +7,8 @@
 
 start(_,_) -> supervisor:start_link({local,blog }, blog,[]).
 stop(_)    -> ok.
-init([])   -> sup().
+init([])   -> naga:watch(blog),
+              sup().
 sup()      -> { ok, { { one_for_one, 5, 100 }, [] } }.
 
 vendors(T,L) when is_list(L)-> 

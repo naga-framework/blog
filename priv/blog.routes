@@ -1,0 +1,6 @@
+[
+%% STATIC FILES ROUTING
+%% ---------------------
+ { "/static/blog/[...]",naga_static,
+                       {dir,"deps/blog/priv/static",[{mimetypes,cow_mimetypes,all}]}}
+].
