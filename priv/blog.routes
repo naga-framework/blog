@@ -3,4 +3,8 @@
 %% ---------------------
  { "/static/blog/[...]",naga_static,
                        {dir,"deps/blog/priv/static",[{mimetypes,cow_mimetypes,all}]}}
+%% naga convenient handler.
+ ,{"/blog/$v/[...]", naga_indexof, { blog,view,"/$v"}}
+ ,{"/blog/$s/[...]", naga_indexof, { blog,static,"/$s"}}
+
 ].
