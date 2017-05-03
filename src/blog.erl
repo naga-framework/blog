@@ -36,9 +36,8 @@ js(_,_) -> [{blog, [jquery,bootstrap3,blog]}].
 
 dummy() ->
    [
-    {page,[{css,vendors(css,[bootstrap3,fontawesome,blog])},
-           {js,vendors(js,[bootstrap3,fontawesome,jquery,blog])}
-          ]}
+    {css,vendors(css,[bootstrap3,fontawesome,blog])},
+    {js,vendors(js,[bootstrap3,fontawesome,jquery,blog])}
    ].
 
 data_dummy() ->
@@ -83,7 +82,7 @@ data_dummy() ->
    {content, <<"Want to get in touch with me? Fill out the form below"
                " to send me a message and I will try to get back "
                "to you within 24 hours!">>},
-   {media, [{<<"bg">>,<<"/static/img/about-bg.jpg">>}]},
+   {media, [{<<"bg">>,<<"/static/blog/img/about-bg.jpg">>}]},
    {publish_date,{{2014,9,24},{8,0,0}}}],
 
   [{author_id,1},
@@ -91,7 +90,7 @@ data_dummy() ->
    {heading,<<"About Me">>}, 
    {subheading,<<"This is what I do.">>},
    {content, text()},
-   {media, [{<<"bg">>,<<"/static/img/about-bg.jpg">>}]},
+   {media, [{<<"bg">>,<<"/static/blog/img/about-bg.jpg">>}]},
    {publish_date,{{2014,9,24},{8,0,0}}}],
 
   [{author_id,1},
@@ -136,8 +135,8 @@ data_dummy() ->
                 end, Articles).
 
 sample_media() -> 
-  [{<<"bg">>, <<"/static/img/about-bg.jpg">>},
-   {<<"img1">>,<<"/static/img/post-sample-image.jpg">>}].
+  [{<<"bg">>, <<"/static/blog/img/about-bg.jpg">>},
+   {<<"img1">>,<<"/static/blog/img/post-sample-image.jpg">>}].
 
 sample() ->
 <<"Never in all their history have men been able truly to conceive of "
